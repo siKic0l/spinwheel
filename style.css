@@ -3,6 +3,12 @@
     margin: 0;
     box-sizing: border-box;
 }
+@media (max-width:600px){
+    .mainWidget {
+        width: 95vw;
+        border-width: 20px;
+    }
+}
 body{
     display: flex;
     align-items: center;
@@ -68,12 +74,13 @@ body > * {
 .wheel span{
     position: absolute;
     display: inline-block;
-    top: 122px;
-    left: 140px;
-    transform: rotate(calc(45deg * var(--i))) translate(0, -122px);
-    border-top: 246px solid hsl(calc(45 * var(--i)), 100%, 50%);
-    border-left: 100px solid transparent;
-    border-right: 100px solid transparent;
+    top: 50%;
+    left: 50%;
+    transform: rotate(calc(45deg * var(--i))) translate(-50%, -50%);
+    border-top: 50% solid hsl(calc(45 * var(--i)), 100%, 50%);
+    border-left: 20% solid transparent;
+    border-right: 20% solid transparent;
+    transform-origin: bottom center;
 }
 .wheel span b{
     display: flex;
@@ -82,7 +89,7 @@ body > * {
     position: absolute;
     writing-mode: vertical-rl;
     font-weight: 100;
-    transform: translate(-50%, -200px);
+    transform: translate(-50%, -120%) rotate(180deg);
     color: #fff;
     filter: drop-shadow(3px 3px 3px #000);
 }
