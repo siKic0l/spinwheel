@@ -6,7 +6,7 @@
 @media (max-width:600px){
     .mainWidget {
         width: 95vw;
-        border-width: 20px;
+        border-width: 5vw;
     }
 }
 body{
@@ -76,20 +76,21 @@ body > * {
     display: inline-block;
     top: 50%;
     left: 50%;
+    transform-origin: bottom center;
     transform: rotate(calc(45deg * var(--i))) translate(-50%, -50%);
     border-top: 50% solid hsl(calc(45 * var(--i)), 100%, 50%);
     border-left: 20% solid transparent;
     border-right: 20% solid transparent;
-    transform-origin: bottom center;
+    heigth: 0;
+    width: 0;
 }
 .wheel span b{
-    display: flex;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: clamp(12px, 4vw, 30px);
+    font-size: clamp(12px, 3.5vw, 324px);
     position: absolute;
     writing-mode: vertical-rl;
     font-weight: 100;
-    transform: translate(-50%, -120%) rotate(180deg);
+    transform: translateX(-50%) rotate(180deg);
     color: #fff;
     filter: drop-shadow(3px 3px 3px #000);
 }
