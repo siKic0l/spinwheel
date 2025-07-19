@@ -36,24 +36,20 @@ body > * {
     margin-left: 0;
     margin-right: 0;
 }
-.mainWidget{
-    position: relative;
-    height: 548px;
-    width: 548px;
-    border-radius: 50%;
-    border: 32px solid transparent;
-    box-shadow: 0 5px 20px #000;
-    background: linear-gradient(to bottom, red, black) border-box;
+.mainWidget {
+  width: 90vw;
+  max-width: 548px;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  border: 5vw solid transparent;
 }
-.wheel{
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    border-radius: 50%;
-    overflow: hidden;
-    background-color: #fff;
-    transition: all ease-in-out 5s;
+
+.wheel {
+  width: 100%;
+  height: 100%;
+  transition: transform 5s ease-out;
 }
+
 .wheel:before{
     content: '';
     position: absolute;
